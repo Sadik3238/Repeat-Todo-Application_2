@@ -1,0 +1,286 @@
+/* ===common css=== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(121, 121, 208);
+  height: 100vh;
+  font-family: roboto;
+}
+main {
+  top: 50%;
+  left: 50%;
+  background: rgba(12, 77, 161, 0.563);
+  border-radius: 10px;
+  min-width: 800px;
+  position: absolute;
+  transform: translate(-50%, -60%);
+}
+
+/* ==first section css start== */
+.task_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+}
+h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  margin-left: 10px;
+}
+.separator {
+  height: 1px;
+  width: 90%;
+  margin: 5px auto;
+  background-color: #975050;
+}
+#form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+.task_name label {
+  font-weight: 400;
+  font-size: 12px;
+  color: rgb(198, 219, 219);
+}
+.task_name input {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: aliceblue;
+  border-radius: 5px;
+  border-color: #dabdbd;
+  height: 20px;
+  width: 80%;
+}
+.task_priority label {
+  font-weight: 400;
+  font-size: 12px;
+  color: rgb(198, 219, 219);
+}
+.task_priority select {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: aliceblue;
+  border-radius: 5px;
+  border-color: #e8d2d2;
+  height: 20px;
+  width: 60%;
+}
+.date label {
+  font-weight: 400;
+  font-size: 12px;
+  color: rgb(198, 219, 219);
+}
+.date input {
+  background-color: aliceblue;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  border-color: #e8d2d2;
+  width: 70%;
+  height: 20px;
+}
+
+.submit input {
+  width: 60px;
+  height: 20px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  border-color: rgb(184, 223, 184);
+  background: rgb(47, 141, 47);
+}
+/* ==first section css end== */
+
+/* ==second section css start== */
+.tools {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 5px;
+  margin-right: 30px;
+}
+.task_search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.task_search label {
+  font-weight: 400;
+  font-size: 12px;
+  color: rgb(198, 219, 219);
+}
+.task_search input {
+  width: 50%;
+  height: 20px;
+  background-color: aliceblue;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  border-color: #e8d2d2;
+}
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 12px;
+  color: rgb(198, 219, 219);
+  gap: 2px;
+  margin-right: 10px;
+}
+.filter select {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: aliceblue;
+  border-radius: 5px;
+  border-color: #e8d2d2;
+  width: 75%;
+  height: 20px;
+}
+.sort {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 12px;
+  color: rgb(198, 219, 219);
+  gap: 2px;
+}
+.sort select {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: aliceblue;
+  border-radius: 5px;
+  border-color: #e8d2d2;
+  width: 70%;
+  height: 20px;
+}
+.by_date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 12px;
+  color: rgb(198, 219, 219);
+  gap: 2px;
+}
+.by_date input {
+  background-color: aliceblue;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  border-color: #e8d2d2;
+  width: 70%;
+  height: 20px;
+}
+/* ==second section css end== */
+
+/* ==third section css start== */
+
+/* --bulk action start-- */
+#bulk_action {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: whitesmoke;
+  width: 90%;
+  height: 30px;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+#bulk_action button {
+  width: 50px;
+  height: 25px;
+}
+#delete_btn {
+  background: rgb(154, 56, 56);
+  outline: none;
+  border: none;
+  color: whitesmoke;
+  border-radius: 3px;
+}
+#edit_btn {
+  background: green;
+  outline: none;
+  border: none;
+  color: black;
+  border-radius: 3px;
+}
+#dismiss {
+  background: gray;
+  outline: none;
+  border: none;
+  color: black;
+  border-radius: 3px;
+}
+/* --bulk action end-- */
+
+/* --edit section start-- */
+#edit_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 5px;
+  margin-right: 20px;
+}
+/* --edit section end-- */
+table {
+  width: 100%;
+  margin-top: 20px;
+}
+thead {
+  height: 25px;
+  background: rgb(118, 187, 187);
+}
+#tbody tr {
+  background-color: transparent;
+  text-align: center;
+}
+
+#tbody tr:hover {
+  color: aqua;
+}
+#tbody button {
+  border: none;
+  outline: none;
+  background: unset;
+}
+button i {
+  font-size: 16px;
+  margin: 0 px 10px;
+  color: #f8b500;
+  pointer-events: none;
+}
+
+#bulk_action,
+#edit_section {
+  display: none;
+}
+main #noTasksMessage {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 700;
+}

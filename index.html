@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Todo Application 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="repeat.js"></script>
+</head>
+
+<body>
+    <main>
+        <!-- firs section start -->
+        <h1 class="task_title">Repeat My To-Do Lists</h1>
+        <h3>New Task Creation</h3>
+        <div class="separator"></div>
+        <!-- task form start -->
+        <form id="form">
+            <!-- task name -->
+            <div class="task_name">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Add a new task">
+            </div>
+            <!-- task name end -->
+
+            <!-- priority -->
+            <div class="task_priority">
+                <label for="priority">Priority</label>
+                <select name="priority" id="priority">
+                    <option disabled>Select One</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+            <!-- priority end -->
+
+            <!-- date start -->
+            <div class="date">
+                <label for="date">Date</label>
+                <input required type="date" name="date" id="date">
+            </div>
+            <!-- date end -->
+
+            <!-- submit btn -->
+            <div class="submit">
+                <input type="submit" value="Add now">
+            </div>
+        </form>
+        <!-- first section end -->
+
+        <!-- second section start && heading below -->
+        <h3>Task Management</h3>
+        <div class="separator"></div>
+        <div class="tools">
+            <!-- search -->
+            <div class="task_search">
+                <label for="search">Search</label>
+                <input type="search" name="search" id="search" placeholder="Search by name">
+            </div>
+            <!-- filter -->
+            <div class="filter">
+                <label for="filter">Filter</label>
+                <select name="filter" id="filter">
+                    <option value="all">All</option>
+                    <option value="1">Complete</option>
+                    <option value="0">Pending</option>
+                    <option value="today">Today</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+            <!-- sort -->
+            <div class="sort">
+                <label for="sort">Sort</label>
+                <select name="sort" id="sort">
+                    <option value="new">New</option>
+                    <option value="old">Old</option>
+                </select>
+            </div>
+            <!-- by date -->
+            <div class="by_date">
+                <label for="by_date">By Date</label>
+                <input type="date" name="by_date" id="by_date">
+            </div>
+        </div>
+        <!-- second section end here -->
+
+        <!-- third section start -->
+        <div id="bulk_action">
+            <button id="delete_btn"><i class="fa-solid fa-trash-can"></i></button>
+
+            <button id="edit_btn"><i class="fa-solid fa-pen"></i></button>
+
+            <button id="dismiss"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+
+        <!-- edit section start -->
+
+        <div id="edit_section" class="edit_section">
+
+            <form id="edit_form">
+                <!-- task name -->
+                <div class="task_name">
+                    <label for="edit_name">Name</label>
+                    <input type="text" name="name" id="edit_name" placeholder="Add a new task">
+                </div>
+                <!-- task name end -->
+
+                <!-- priority -->
+                <div class="task_priority">
+                    <label for="edit_priority">Priority</label>
+                    <select name="priority" id="edit_priority">
+                        <option disabled selected>Select One</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <!-- priority end -->
+
+                <!-- date start -->
+                <div class="date">
+                    <label for="edit_date">Date</label>
+                    <input required type="date" name="date" id="edit_date">
+                </div>
+                <!-- date end -->
+
+                <!-- submit btn -->
+                <div class="submit">
+                    <input type="submit" value="Add now">
+                </div>
+            </form>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <label style="margin-right: 5px;" for="checkbox">All</label>
+                        <input style="margin-right: 32px;" type="checkbox" name="checkbox" id="allSelect"></input>
+                    </th>
+                    <th>No.</th>
+                    <th>Task Name</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <!-- <tr>
+                <td></td>
+                <td>01</td>
+                <td>Cricket</td>
+                <td>High</td>
+                <td>Incomplete</td>
+                <td>2024-05-08</td>
+                <td>
+                    <button id="edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button id="check">
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+                    <button id="delete">
+                        <i class="fa-solid fa-trash"></i>
+                 </button>
+                </td> 
+            </tr>
+            <tr>
+                <td></td>
+                <td>01</td>
+                <td>Cricket</td>
+                <td>High</td>
+                <td>Incomplete</td>
+                <td>2024-05-08</td>
+                <td>
+                    <button id="edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button id="check">
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+                    <button id="delete">
+                        <i class="fa-solid fa-trash"></i>
+                 </button>
+                </td> 
+            </tr> -->
+            </tbody>
+        </table>
+        <div id="noTasksMessage">Nothing to show</div>
+    </main>
+</body>
+
+</html>
